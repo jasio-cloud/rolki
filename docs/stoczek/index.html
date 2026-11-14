@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Filmy stoczek</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{--tlo:#f7f5f1;--karta:#fff;--tekst:#1c1a16;--cichy:#6c6557;--kreska:#e2ddd3;
+--akcent:#e8a317;--akcent-tekst:#1c1a16;--dobry:#2f7d4f;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--tlo:#16140f;--karta:#211e18;--tekst:#f2eee5;
+--cichy:#a39a88;--kreska:#343027;--akcent:#f0b32c;--akcent-tekst:#16140f;
+--dobry:#6cc08c;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--tlo);color:var(--tekst);font:15px/1.55 Inter,"Segoe UI",system-ui,sans-serif;
+padding:28px max(16px,env(safe-area-inset-right,0px)) 56px max(16px,env(safe-area-inset-left,0px))}
+.srodek{max-width:680px;margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--cichy);font-weight:600}
+h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(27px,6vw,38px);line-height:1.1;
+margin:6px 0 4px;text-wrap:balance}
+.podtytul{color:var(--cichy);margin:0 0 22px}
+.jak{background:var(--karta);border:1px solid var(--kreska);border-radius:12px;padding:14px 16px;
+margin-bottom:26px}
+.jak h2{font-family:"Space Grotesk",Inter,sans-serif;font-size:15px;margin:0 0 7px}
+.jak p{margin:0 0 6px;color:var(--cichy);font-size:14px}
+.jak strong{color:var(--tekst)}
+.lista{display:flex;flex-direction:column;gap:18px}
+.film{background:var(--karta);border:1px solid var(--kreska);border-radius:14px;overflow:hidden;
+display:grid;grid-template-columns:150px minmax(0,1fr)}
+@media(max-width:520px){.film{grid-template-columns:1fr}}
+.film video{width:100%;height:100%;max-width:100%;display:block;aspect-ratio:9/16;
+object-fit:cover;background:#000}
+@media(max-width:520px){.film video{max-height:62vh;object-fit:contain}}
+.opis{padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.gora{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.nr{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;font-size:13px;background:var(--akcent);
+color:var(--akcent-tekst);border-radius:999px;padding:2px 9px;font-variant-numeric:tabular-nums}
+.tekst-opisu{font-size:14px;margin:0;overflow-wrap:anywhere}
+.tagi{font-size:13px;color:var(--cichy);margin:0;overflow-wrap:anywhere}
+.przyciski{display:flex;gap:8px;flex-wrap:wrap}
+a.pobierz,button.kopiuj{font:inherit;font-size:13px;font-weight:600;background:transparent;
+color:var(--tekst);border:1px solid var(--kreska);border-radius:8px;padding:6px 12px;cursor:pointer;
+text-decoration:none;display:inline-block}
+a.pobierz{background:var(--akcent);color:var(--akcent-tekst);border-color:var(--akcent)}
+button.kopiuj[data-ok="1"]{color:var(--dobry);border-color:var(--dobry)}
+a.pobierz:focus-visible,button.kopiuj:focus-visible{outline:2px solid var(--akcent);outline-offset:2px}
+.stopka{margin-top:30px;border-top:1px solid var(--kreska);padding-top:18px}
+.stopka h2{font-family:"Space Grotesk",Inter,sans-serif;font-size:15px;margin:0 0 9px}
+.stopka ul{margin:0;padding-left:20px;color:var(--cichy);font-size:14px}
+.stopka li{margin-bottom:5px}
+.dni{display:flex;flex-direction:column;gap:10px}
+.dzien{display:flex;justify-content:space-between;align-items:center;gap:12px;
+background:var(--karta);border:1px solid var(--kreska);border-radius:12px;padding:14px 16px;
+text-decoration:none;color:var(--tekst)}
+.dzien:hover{border-color:var(--akcent)}
+.dzien b{font-family:"Space Grotesk",Inter,sans-serif;font-size:17px}
+.dzien span{color:var(--cichy);font-size:14px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style></head><body><div class="srodek">
+
+<span class="eyebrow">Twoje filmy</span>
+<h1>stoczek</h1>
+<p class="podtytul">Najnowsze na gorze. Wejdz w dzisiejszy dzien.</p>
+<div class="dni">
+<a class="dzien" href="2026-11-14/"><b>2026-11-14</b><span>10 filmow</span></a>
+</div></div></body></html>
